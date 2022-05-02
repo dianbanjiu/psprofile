@@ -19,22 +19,19 @@ Set-PSReadLineKeyHandler -Chord Ctrl+u -Function DeleteLine
 
 # git 快捷键设定
 function gss {
-    git status -s   
+    git status -s $args
 }
 function gaa {
-    git add --all
+    git add --all $args
 }
 function gc {
-    git commit -v
+    git commit -v $args
 }
 function gp {
-    git push
+    git push $args
 }
 function gcl {
-    param(
-        [string] $repo
-    )
-    git clone --recurse-submodules $repo
+    git clone --recurse-submodules $args
 }
 
 
